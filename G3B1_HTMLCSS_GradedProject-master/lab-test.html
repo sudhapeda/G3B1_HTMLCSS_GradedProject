@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lab Test Booking</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="lab-test-form" id="labTestForm" action="report.html">
+            <h1 id="heading">Booking Form</h1>
+            <div class="form-section">
+                <h2>1. Patient Contact Details</h2>
+                <div class="row">
+                    <div class="column">
+                        <input type="text" id="fullName" name="fullName" required placeholder="Full Name"><br>
+                        <input type="tel" id="contactNumber" name="contactNumber" required pattern="[0-9]{10}"
+                            placeholder="Contact Number"><br>
+                    </div>
+                    <div class="column">
+                        <input type="text" id="patientId" name="patientId" placeholder="Patient Id (If exists)"><br>
+                        <input type="email" id="email" name="email" required placeholder="Email Id"><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>2. Address</h2>
+                <div class="row">
+                    <div class="column">
+                        <input type="text" id="houseNumber" name="houseNumber" required placeholder="House Number"><br>
+                        <input type="text" id="area" name="area" required placeholder="Area"><br>
+                    </div>
+                    <div class="column">
+                        <input type="text" id="street" name="street" required placeholder="Street"><br>
+                        <select id="district" name="district" required aria-placeholder="District">
+                            <option value="Choose">Choose District</option>
+                            <option value="District 1">District 1</option>
+                            <option value="District 2">District 2</option>
+                            <option value="District 3">District 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>3. Choose the Test Type</h2>
+                <label for="testType">Select at least one test:</label><br>
+                <input type="checkbox" id="cbc" name="testType" value="CBC"> CBC<br>
+                <input type="checkbox" id="urine" name="testType" value="Complete Urine"> Complete Urine<br>
+                <input type="checkbox" id="lipid" name="testType" value="Lipid Profile"> Lipid Profile<br>
+                <input type="checkbox" id="tsh" name="testType" value="Thyroid Stimulating Hormone(TSH)">
+                Thyroid Stimulating Hormone(TSH)<br>
+                <input type="checkbox" id="glucose" name="testType" value="Glucose Test"> Glucose Test<br>
+            </div>
+
+            <div class="form-section">
+                <h2>4. Do you want a hard copy of the report also?</h2>
+                <input type="radio" id="hardCopyYes" name="hardCopy" value="Yes" required>
+                <label for="hardCopyYes" class="yes">Yes</label>
+                <input type="radio" id="hardCopyNo" name="hardCopy" value="No" required>
+                <label for="hardCopyNo" class="yes">No</label>
+            </div>
+
+            <div class="form-section">
+                <h2>5. Select Your Comfortable Date and Time</h2>
+                <div class="row">
+                    <div class="column">
+                        <input type="date" id="date" name="date" required placeholder="Date"><br>
+                    </div>
+                    <div class="column">
+                        <input type="time" id="time" name="time" required placeholder="Time"><br>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="fixed-image">
+                <img src="./Images/Lab-Test/lab-test.jpg" alt="Lab Image">
+            </aside>
+
+            <div class="form-section">
+                <button type="reset" class="reset-button">Reset</button>
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+
+</html>
